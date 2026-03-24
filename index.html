@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDex Interativa</title>
+    <style>
+        :root {
+            --primary: #ef5350;
+            --dark: #333;
+            --light: #f4f4f4;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #222; color: var(--dark); display: flex; justify-content: center; padding: 20px; }
+        .pokedex { background: var(--light); width: 100%; max-width: 600px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 10px solid var(--primary); }
+        header { background: var(--primary); padding: 20px; text-align: center; color: white; }
+        input { padding: 10px; border-radius: 5px; border: none; width: 60%; }
+        button { padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; background: var(--dark); color: white; font-weight: bold; }
+        
+        .screen { padding: 20px; display: none; }
+        .active { display: block; }
+
+        .main-info { text-align: center; border-bottom: 2px solid #ddd; padding-bottom: 20px; }
+        #pk-image { width: 180px; height: 180px; filter: drop-shadow(2px 4px 6px black); }
+        
+        .type-badge { padding: 5px 12px; border-radius: 15px; color: white; font-size: 12px; font-weight: bold; margin: 2px; display: inline-block; text-transform: uppercase; }
+        
+        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        h3 { border-bottom: 2px solid var(--primary); font-size: 16px; margin-bottom: 10px; }
+        
+        .ability-btn { background: #3498db; color: white; border: none; padding: 5px; margin: 2px; cursor: pointer; border-radius: 3px; font-size: 12px; }
+        .ability-btn:hover { background: #2980b9; }
+
+        .evolution-chain img { width: 50px; cursor: pointer; border: 1px solid #ccc; border-radius: 50%; margin: 5px; background: white; }
+        
+        .effectiveness span { display: block; font-size: 13px; margin-bottom: 5px; }
+        ul { list-style: none; padding: 0; font-size: 14px; }
+        
+        /* Cores dos Tipos */
+        .fire { background: #F08030; } .water { background: #6890F0; } .grass { background: #78C850; }
+        .electric { background: #F8D030; } .ice { background: #98D8D8; } .fighting { background: #C03028; }
+        .poison { background: #A040A0; } .ground { background: #E0C068; } .flying { background: #A890F0; }
+        .psychic { background: #F85888; } .bug { background: #A8B820; } .rock { background: #B8A038; }
